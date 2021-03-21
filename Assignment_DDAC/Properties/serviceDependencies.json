@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "type": "secrets"
+    },
+    "storage2": {
+      "type": "storage",
+      "connectionId": "ConnectionString/BlobStorageConnection"
+    },
+    "mssql1": {
+      "type": "mssql",
+      "connectionId": "Assignment_DDACContext"
+    },
+    "mssql2": {
+      "type": "mssql",
+      "connectionId": "Assignment_DDACNewContextConnection"
+    },
+    "mssql3": {
+      "type": "mssql",
+      "connectionId": "UserContextConnection"
+    },
+    "storage1": {
+      "type": "storage",
+      "connectionId": "Assignment_DDACBlob"
+    },
+    "appInsights1": {
+      "type": "appInsights",
+      "connectionId": "APPINSIGHTS_CONNECTIONSTRING"
+    }
+  }
+}

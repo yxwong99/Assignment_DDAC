@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Assignment_DDAC.Models.CourseAdmin>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<form>
+    Course Level: @Html.DropDownList("Level", "All")
+    <input type="submit" value="Search Course Level" /><br /><br /><br />
+    Course Type: @Html.DropDownList("Type", "All")
+    <input type="submit" value="Search Course Name" /><br /><br /><br />
+    Course Name: @Html.DropDownList("CourseName", "All")
+    <input type="submit" value="Search Course Name" /><br /><br /><br />
+    University Name: @Html.DropDownList("UniversityName", "All")
+    <input type="submit" value="Search Course Name" /><br /><br /><br />
+    Location: @Html.DropDownList("Location", "All")
+    <input type="submit" value="Search Course Name" /><br /><br /><br />
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Level)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CourseName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UniversityName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.URL)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Level)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UniversityName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.URL)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

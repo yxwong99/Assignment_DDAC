@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewData["Title"] = "ListLogo";
+}
+
+<h1>ListLogo</h1>
+
+<table>
+    <td>
+        @foreach (var item in Model)
+        {
+            string[] link = item.Split("#");
+            <li>
+                <img src="@link[1]" width="200px" height="200px" />
+            </li>
+        }
+    </td>
+</table>
